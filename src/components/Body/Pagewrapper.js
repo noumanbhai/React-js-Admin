@@ -6,6 +6,8 @@ import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import Home from "../Pages/Home";
 import { Route} from "react-router-dom";
+import NotFound from "./NotFound"
+import { Switch } from "react-router";
 function Pagewrapper() {
   return (
     <>
@@ -29,20 +31,20 @@ function Pagewrapper() {
               <div className="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
               </div>
+              <Switch>
               <Route exact path="/">
                 <Home />
               </Route>
               <Route exact path="/about">
                 <About />
               </Route>
+              <Route exact path="/contact">
+                <Contact />
+              </Route>
+              <Route  component={NotFound} />
+              </Switch>
             </div>
           </div>
-
-          {/*   Page Heading end*/}
-          {/* center  start*/}
-          {/* <About />
-          <Home />
-          <Contact /> */}
           {/* center end */}
 
           {/*  Footer */}

@@ -11,7 +11,6 @@ function Sidebar() {
   let location = useLocation();
 
   useEffect(() => {
-    console.log(location.pathname);
   }, [location]);
   return (
     <>
@@ -92,7 +91,8 @@ function Sidebar() {
                 className={`collapse-item ${
                   location.pathname === "/contact" ? "active" : ""
                 }`}
-                to="/Contact"
+                exact
+                to="/contact"
               >
                 Contact
               </Link>
