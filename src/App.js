@@ -1,10 +1,10 @@
 import Pagewrapper from "./components/Body/Pagewrapper";
-
+import { BrowserRouter} from "react-router-dom";
 function App() {
   return (
-    <div >
-      <Pagewrapper/>
-    </div>
+    <BrowserRouter>
+        <Pagewrapper />
+    </BrowserRouter>
   );
 }
 

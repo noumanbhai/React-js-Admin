@@ -5,7 +5,7 @@ import Sidebar from "../Main/Sidebar";
 import About from "../Pages/About";
 import Contact from "../Pages/Contact";
 import Home from "../Pages/Home";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Route} from "react-router-dom";
 function Pagewrapper() {
   return (
     <>
@@ -29,6 +29,12 @@ function Pagewrapper() {
               <div className="d-sm-flex align-items-center justify-content-between mb-4">
                 <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
               </div>
+              <Route exact path="/">
+                <Home />
+              </Route>
+              <Route exact path="/about">
+                <About />
+              </Route>
             </div>
           </div>
 
