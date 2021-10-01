@@ -1,12 +1,13 @@
 import Pagewrapper from "./components/Body/Pagewrapper";
 import { BrowserRouter, Route} from "react-router-dom";
-import NotFound from "./components/Body/NotFound";
+import ConterContext from "./components/Main/Context/ConterContext";
 function App() {
   return (
-    <BrowserRouter>
-      <Pagewrapper />
-      <Route component={NotFound} />
-    </BrowserRouter>
+    <ConterContext.Provider value={11}>
+      <BrowserRouter>
+        <Pagewrapper />
+      </BrowserRouter>
+    </ConterContext.Provider>
   );
 }
 
